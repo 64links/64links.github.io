@@ -17,39 +17,49 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100 bg-light">
-        <div class="terminal bg-gradient-primary-to-secondary">
-            <pre id="payload"></pre>
-            <!--code echo 'Hello, world!' | base64 | sed -e 's/+/%2b/g' -e 's/\//%2f/g' -e 's/=/%3d/g' | awk '{print "https://64links.github.io/u/#"$1}'-->
-        </div>
-        <section class="fixed-bottom py-5 bg-light bg-opacity-75">
-            <div class="container px-5">
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-xxl-8">
-                        <div class="text-center">
-                            <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">64 links</span></h2>
-                            <p class="lead fw-light mb-4">Your clipboard messages deserve to be classified.</p>
-                            <p class="text-muted">
-                                The message you see at the very top is
-                                <strong class="text-gradient">stored solely in the URL</strong>
-                                of this page, in base64- and URL-encoded format. Moreover, the message
-                                <strong class="text-gradient">hasn't been sent over the network</strong>
-                                , because web browsers never send URL
-                                <code>#fragments</code>
-                                to servers
-                                <sup><a href="https://www.w3.org/TR/webarch/#media-type-fragid">[w3 specs]</a></sup>
-                                . Finally, you can create unlimited amount of such links
-                                <strong class="text-gradient">without sending any requests</strong>
-                                <sup><a href="https://github.com/64links/64links.github.io">[see how]</a></sup>
-                                !
-                            </p>
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="https://github.com/64links/64links.github.io"><i class="bi bi-github"></i></a>
+        <div class="offcanvas offcanvas-bottom h-auto" id="offcanvasBottom" tabindex="-1" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-body">
+                <section class="py-3">
+                    <div class="container px-5">
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-xxl-8">
+                                <div class="text-center">
+                                    <h2 class="display-5 fw-bolder mb-4"><span class="text-gradient d-inline">Seriously!</span></h2>
+                                    <p class="text-muted">
+                                        The message you see at the very top is
+                                        <strong class="text-gradient">stored solely in the URL</strong>
+                                        of this page, in base64-encoded format. Moreover, the message
+                                        <strong class="text-gradient">hasn't been sent over the network</strong>
+                                        , because web browsers never send URL
+                                        <code>#fragments</code>
+                                        to servers
+                                        <sup><a href="https://www.w3.org/TR/webarch/#media-type-fragid">[w3 specs]</a></sup>
+                                        . Finally, you can create unlimited amount of such links
+                                        <strong class="text-gradient">without sending any requests</strong>
+                                        <sup><a href="https://github.com/64links/64links.github.io">[see how]</a></sup>
+                                        !
+                                    </p>
+                                    <div class="d-flex justify-content-center fs-2 gap-4">
+                                        <a class="text-gradient" href="#!"><i class="bi bi-github"></i></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+            </div>
+        </div>
+        <div class="terminal bg-gradient-primary-to-secondary"><pre id="payload" spellcheck="false"></pre></div>
+        <section class="fixed-bottom py-3 bg-light bg-opacity-75">
+            <div class="container px-5">
                 <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0">(c) Igors Lapinskis @igops 2024</div></div>
+                    <div class="col-auto">
+                        <h2 class="fw-bolder m-0"><span class="text-gradient d-inline">64 links</span></h2>
+                        <p class="small mt-n1 mb-n1">
+                            Your clipboard messages deserve to be classified
+                            <button class="btn btn-sm text-light text-center align-baseline bg-gradient-primary-to-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">WTF?</button>
+                        </p>
+                    </div>
                     <div class="col-auto">
                         <a
                             class="small"
@@ -61,13 +71,15 @@
                         <a class="small" href="/u/#Q29weXJpZ2h0IChjKQoKMS4gRGV2ZWxvcGVkIGJ5IElnb3JzIExhcGluc2tpcyBAaWdvcHMgaW4gMjAyNAoyLiBGYXZpY29uIG1hZGUgYnkgU2h1dm8uRGFzIGZyb20gd3d3LmZsYXRpY29uLmNvbQozLiBIVE1MIHRlbXBsYXRlIG1hZGUgYnkgU3RhcnQgQm9vdHN0cmFwIExMQwo0LiAiUmV0cm8gdGVybWluYWwiIGxvb2sgYW5kIGZlZWwgaW5zcGlyZWQgYnkgQ2hyaXMgQ295aWVyJ3MgY29kZXBlbiBodHRwczovL2NvZGVwZW4uaW8vY2hyaXNjb3lpZXIvcGVuL0dCYk9KZAo%3d">Credits</a>
                         <span class="mx-1">&middot;</span>
                         <a class="small" href="/u/#Rm91bmQgYSBidWc%2fCkNoZWNrIHRoZSBsaXN0IG9mIGtub3duIGlzc3VlcyBhbmQgc29sdXRpb25zIGF0IGh0dHBzOi8vZ2l0aHViLmNvbS82NGxpbmtzLzY0bGlua3MuZ2l0aHViLmlvL2lzc3Vlcy4KCkZvciBhbnkgb3RoZXIgcXVlc3Rpb25zLCBmZWVkYmFjayBvciBzdWdnZXN0aW9ucywgcGxlYXNlIGNvbnRhY3QgbWUgYXQgaGlAaWdvcHMubWUuCg%3d%3d">Contact</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="lead text-gradient" href="https://github.com/64links/64links.github.io"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
 </html>
