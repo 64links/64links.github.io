@@ -1,9 +1,13 @@
 # 64 links
 ### Create a permanent link to your short message without transferring any byte!
 
+"64 links" has a dedicated URL to every reasonably short (TODO: specify the exact limit) clipboard message ever made and will be ever made, including the answers to all the questions ever asked. These messages are not stored anywhere, not sent to or downloaded from the network, so that, cannot be btute-forced or compromised. When you "create a link" to your message, no bytes are transferred. When you "visit a link", the browser downloads the WEB app only, but the message is not sent to or received from the Internet.
+
 E.g., classic `Hello, world!` greeting has the following link: https://64links.github.io/u/#SGVsbG8sIHdvcmxkIQo%3d
 
-> Check out the [manifesto](#manifesto)!
+> [!TIP]
+> I strongly advise checking out the [manifesto](#manifesto) before using!  
+> To delve into technical details, first check out a _WTF_ button at the footer of https://64links.github.io.
 
 ### Creating a link on Mac OS X
 ```shell
@@ -46,10 +50,9 @@ echo 'My awesome message' \                                  # <-- Just echo
 All modern terminals recognize the links once they appear in the output. So highly likely you are willing to click on the link you just created.
 
 ### 3. We want sustainability
-Microsoft seems to be immortal, that's why I've hosted "64 links" right on GitHub pages. Call Bill in case of some downtime, but so far just enjoy the global coverage.
+Microsoft seems to be immortal, that's why I've hosted "64 links" right on GitHub pages. Call Bill in case of some downtime, but so far just enjoy the global coverage. However, keep in mind, there are no any guarantees in stability no matter how good or bad the source code is.
 
-### Prequel
-"64 links" has a dedicated URL to every reasonably short (TODO: specify the exact limit) clipboard message ever made, including the answers to all the questions ever asked. These messages are not stored anywhere, not sent to or downloaded from the network, so that, cannot be btute-forced or compromised. When you "create a link" to your message, no bytes are transferred. When you "visit a link", the browser downloads the WEB app only, but the message is not sent to or received from the Internet.
-
-To delve into technical details, check out a _WTF_ button at the footer of https://64links.github.io.
-
+##
+Yours sincerely,  
+Igops, _per aspera ad DevOps_  
+<hi@igops.me>
